@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blog.dao.PostDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.blog.entity.PostEntity" id="postMap">
+        <result property="post_id" column="post_id"/>
+        <result property="title" column="title"/>
+        <result property="postContent" column="post_content"/>
+        <result property="postCreateTime" column="post_create_time"/>
+        <result property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+    </resultMap>
+    
+    <select id="selectPostListInfo" resultMap="postMap">
+    	SELECT post.post_id,post.title,post.post_content,post.post_create_time,post.user_id,user.username FROM post LEFT JOIN `user` ON(post.user_id=user.user_id) ORDER BY post_create_time DESC LIMIT #{start},#{size}
+    </select>
+    
+    <select id="selectPostInfoCount" resultType="int">
+    	SELECT COUNT(*) FROM `post`
+    </select>
+
+
+</mapper>

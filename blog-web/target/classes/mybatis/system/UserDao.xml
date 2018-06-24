@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blog.dao.UserDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.blog.entity.UserEntity" id="userMap">
+        <result property="user_id" column="user_id"/>
+        <result property="username" column="username"/>
+        <result property="sex" column="sex"/>
+        <result property="phone" column="phone"/>
+        <result property="password" column="password"/>
+        <result property="level" column="level"/>
+        <result property="createTime" column="create_time"/>
+        <result property="email" column="email"/>
+        <result property="logo" column="logo"/>
+    </resultMap>
+    
+    <insert id="insertUserEntity" parameterType="UserEntity">
+    insert into `user` (username,sex,phone,password,level,create_time,email,logo)
+    values(#{username},#{sex},#{phone},#{password},#{level},#{createTime},#{email},#{logo})
+    
+    </insert>
+
+
+</mapper>

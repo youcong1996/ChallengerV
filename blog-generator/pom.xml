@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cn.youcong.blog</groupId>
+    <artifactId>blog-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>blog-generator</artifactId>
+  
+  <dependencies>
+		<!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus</artifactId>
+			<version>2.1.8</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity -->
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.19</version>
+		</dependency>
+		<!-- Mysql -->
+		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.21</version>
+		</dependency>
+
+
+
+
+	</dependencies>
+  <build>
+		<plugins>
+
+			<!-- 指定编译版本 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<!-- YUI Compressor (CSS/JS压缩) -->
+			<!-- <plugin> <groupId>net.alchim31.maven</groupId> <artifactId>yuicompressor-maven-plugin</artifactId> 
+				<version>1.5.1</version> <executions> <execution> <phase>prepare-package</phase> 
+				<goals> <goal>compress</goal> </goals> </execution> </executions> <configuration> 
+				<encoding>UTF-8</encoding> <jswarn>false</jswarn> <nosuffix>true</nosuffix> 
+				<linebreakpos>30000</linebreakpos> <force>true</force> <includes> <include>**/*.js</include> 
+				<include>**/*.css</include> </includes> <excludes> <exclude>**/*.min.js</exclude> 
+				<exclude>**/*.min.css</exclude> </excludes> <aggregations> <aggregation> 
+				<removeIncluded>true</removeIncluded> <insertNewLine>true</insertNewLine> 
+				<inputDir>${project.build.directory}/${project.build.finalName}</inputDir> 
+				<output>${project.build.directory}/${project.build.finalName}/app/js/app.pack.js</output> 
+				<includes> <include>app/js/app*.js</include> </includes> <excludes> <exclude>**/**min.js</exclude> 
+				</excludes> </aggregation> </aggregations> </configuration> </plugin> -->
+		</plugins>
+		<finalName>${project.artifactId}</finalName>
+	</build>
+  
+</project>
