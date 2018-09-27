@@ -1,0 +1,5 @@
+com\blog\entity\PostTagEntity.class
+com\blog\entity\PostEntity.class
+com\blog\entity\UserEntity.class
+com\blog\entity\CommentEntity.class
+com\blog\entity\TagEntity.class

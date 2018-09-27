@@ -508,7 +508,8 @@
 	<modules>
 		<module>blog-common</module>
 		<module>blog-web</module>
-		<module>blog-core</module>
 		<module>blog-generator</module>
+		<module>blog-dao</module>
+		<module>blog-service</module>
 	</modules>
 </project>

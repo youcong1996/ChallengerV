@@ -1,0 +1,5 @@
+com\blog\dao\TagDao.class
+com\blog\dao\PostDao.class
+com\blog\dao\UserDao.class
+com\blog\dao\PostTagDao.class
+com\blog\dao\CommentDao.class
