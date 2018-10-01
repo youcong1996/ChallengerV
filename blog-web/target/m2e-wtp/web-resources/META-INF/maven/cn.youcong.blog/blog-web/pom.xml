@@ -8,12 +8,7 @@
   <artifactId>blog-web</artifactId>
   <packaging>war</packaging>
   <dependencies>
-  <!-- 工具类集合 -->
-  <dependency>	
-	<groupId>cn.youcong.blog</groupId>
-	<artifactId>blog-common</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-  </dependency>
+
   
   <dependency>	
 	 <groupId>cn.youcong.blog</groupId>
